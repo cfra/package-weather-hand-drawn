@@ -13,7 +13,7 @@ CONFIG.restart_on_update()
 
 def download(key, what, where):
     try:
-        url = "http://api.wunderground.com/api/%s/%s/q/%s.json" % (
+        url = "http://api.wunderground.com/api/%s/%s/lang:DL/q/%s.json" % (
             key, what, urllib.quote(where)
         )
         print url
