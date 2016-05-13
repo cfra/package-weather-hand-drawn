@@ -250,5 +250,5 @@ function node.render()
         res.font:write(x + 120, 710, forecast.low.celsius, 40, .2,.2,.2,1)
         res.font:write(x, 745, forecast.conditions, 20, 1,1,1,0.8)
     end
-    util.draw_correct(res.wunderground, 909, 650, 744, 760)
+    util.draw_correct(res.wunderground, 909, 744, 1020, 760)
 end
