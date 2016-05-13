@@ -216,7 +216,7 @@ function node.render()
 
     -- Zusammenfassung links oben
     res.font:write(20, 10, "Wind: " .. conditions.wind_string, 40, 1,1,1,1)
-    res.font:write(20, 60, "Humidity: " .. conditions.relative_humidity, 40, 1,1,1,1)
+    res.font:write(20, 60, "Luftfeuchte: " .. conditions.relative_humidity, 40, 1,1,1,1)
     res.font:write(20, 110,conditions.weather, 40, 1,1,1,1)
 
     -- Grosse Temperaturanzeige
@@ -250,5 +250,5 @@ function node.render()
         res.font:write(x + 120, 710, forecast.low.celsius, 40, .2,.2,.2,1)
         res.font:write(x, 745, forecast.conditions, 20, 1,1,1,0.8)
     end
-    util.draw_correct(res.wunderground, 800, 650, 1020, 760)
+    util.draw_correct(res.wunderground, 909, 650, 744, 760)
 end
