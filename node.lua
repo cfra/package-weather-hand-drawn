@@ -215,9 +215,11 @@ function node.render()
     shader:deactivate()
 
     -- Zusammenfassung links oben
-    res.font:write(20, 10, "Wind: " .. conditions.wind_string, 40, 1,1,1,1)
-    res.font:write(20, 60, "Luftfeuchte: " .. conditions.relative_humidity, 40, 1,1,1,1)
-    res.font:write(20, 110,conditions.weather, 40, 1,1,1,1)
+    local wind_info = string.format("Wind von %s mit %.1f km/h, Böen bis %.1f km/h",
+                                    conditions.wind_dir, conditions.wind_kph, conditions.wind_gust_kph)
+    res.font:write(20, 10, conditions.weather, 27, 1,1,1,1)
+    res.font:write(20, 45, wind_info, 27, 1,1,1,1)
+    res.font:write(20, 80, "Luftfeuchte " .. conditions.relative_humidity, 27, 1,1,1,1)
 
     -- Grosse Temperaturanzeige
     local temp = tonumber(conditions.temp_c)
